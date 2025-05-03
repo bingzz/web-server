@@ -8,6 +8,7 @@ import (
 	"web-server/src/schema"
 )
 
+// Logs an error in the logs folder
 func ErrorLog(errMsg schema.HTTPResponse) {
 
 	var fileDate string = YYYYMMDD()

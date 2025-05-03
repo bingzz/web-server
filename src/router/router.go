@@ -1,6 +1,7 @@
 package router
 
 import (
+	"fmt"
 	"web-server/src/functions"
 	"web-server/src/middlewares"
 
@@ -8,6 +9,7 @@ import (
 )
 
 func InitializeAPI() *gin.Engine {
+	fmt.Println("Setting API...")
 	// Create Gin Router
 	router := gin.Default()
 
@@ -23,5 +25,6 @@ func InitializeAPI() *gin.Engine {
 	router.PATCH("/album", functions.UpdateAlbum)
 	router.DELETE("/albums/:id", functions.DeleteAlbum)
 
+	router.POST("/login", functions.Login)
 	return router
 }

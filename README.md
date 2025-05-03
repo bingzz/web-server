@@ -12,3 +12,13 @@ Use go get `<package_url>`
 | - | - |
 | `github.com/gofor-little/env` | `.env` reader | 
 | `github.com/gin-gonic/gin` | Golang API Web Framework |
+
+
+## Setting up Database (Postgres)
+
+| Command | Description |
+| - | - |
+| `systemctl status postgresql` | Check RDBMS status |
+| `psql -U postgres -d personal_db -h 127.0.0.1 -W` | Start Connection |
+| `sudo ufw status` | Check port status |
+| `sudo ufw allow 5432/tcp` | Allow port 5432 |

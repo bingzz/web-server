@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"web-server/src/constants"
+	"web-server/src/db"
 	"web-server/src/router"
 	"web-server/src/validators"
 	// Alias with import location
@@ -14,6 +15,7 @@ func main() {
 	environment, host, port := validators.ValidateEnv()
 
 	listener := router.InitializeAPI()
+	db.InitializeDB()
 
 	fmt.Printf("%s======\nEnvironment: %s\nHost: %s:%s\n======\n\n%s", constants.Green, environment, host, port, constants.Reset)
 	listener.Run(fmt.Sprintf("%s:%s", host, port))
