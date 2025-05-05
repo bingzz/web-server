@@ -68,6 +68,7 @@ func Login(c *gin.Context) {
 			}
 
 			utils.ErrorLog(httpResponse)
+			c.JSON(httpResponse.StatusCode, httpResponse)
 			return
 		}
 	}

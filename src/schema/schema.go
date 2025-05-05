@@ -5,10 +5,11 @@ import "sync"
 // Declaring Models
 
 type Album struct {
-	ID     string  `json:"id" binding:"required"` // Declaring object property and ensuring that ID is required at all times
-	Title  string  `json:"title"`
-	Artist string  `json:"artist"`
-	Price  float64 `json:"price"`
+	ID         int     `json:"id"` // Declaring object property and ensuring that ID is required at all times
+	Title      string  `json:"title"`
+	AuthorID   int     `json:"author_id"`
+	AuthorName string  `json:"author_name"`
+	Price      float32 `json:"price"`
 }
 
 type HTTPResponse struct {
